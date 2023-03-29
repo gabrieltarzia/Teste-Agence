@@ -1,8 +1,12 @@
-import 'package:agence_task/App/View/login.view.dart';
+import 'package:agence_task/App/Controller/user.controller.dart';
+import 'package:firebase/firebase.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../Controller/home.controller.dart';
 
 class HomeWidgets {
+  final controller = Get.put(HomeController());
+  final userController = Get.put(UserController());
   homeDrawer(RxString userName, RxString pictureUrl) => Drawer(
         child: ListView(
           padding: const EdgeInsets.all(7),
@@ -36,7 +40,7 @@ class HomeWidgets {
             ListTile(
               title: const Text('LogOut'),
               onTap: () {
-                Get.to(LoginView());
+                userController.googleLogOut();
               },
             ),
           ],

@@ -1,4 +1,5 @@
 import 'package:agence_task/App/Controller/login.controller.dart';
+import 'package:agence_task/App/Controller/user.controller.dart';
 import 'package:agence_task/App/Helper/colors.helper.dart';
 import 'package:agence_task/App/Helper/theme.helper.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ class LoginView extends GetView<LoginController> {
 
   @override
   final controller = Get.put(LoginController());
+  final userController = Get.put(UserController());
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +97,7 @@ class LoginView extends GetView<LoginController> {
             text: 'Entre com Google',
             buttonType: SocialLoginButtonType.google,
             onPressed: () {
-              controller.googleLogin();
+              userController.googleLogin();
             },
           ),
           const Divider(),

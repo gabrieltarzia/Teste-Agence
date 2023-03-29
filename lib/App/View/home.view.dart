@@ -1,9 +1,9 @@
 import 'package:agence_task/App/Controller/home.controller.dart';
-import 'package:agence_task/App/View/login.view.dart';
+import 'package:agence_task/App/Controller/user.controller.dart';
+import 'package:agence_task/App/Helper/theme.helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../Controller/login.controller.dart';
+import '../Model/item.model.dart';
 import 'Widgets/HomeWidgets/homeDrawer.widget.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -11,7 +11,7 @@ class HomeView extends GetView<HomeController> {
 
   @override
   final controller = Get.put(HomeController());
-  final loginController = Get.put(LoginController());
+  final userController = Get.put(UserController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class HomeView extends GetView<HomeController> {
           actions: [
             IconButton(
                 onPressed: () {
-                  Get.to(LoginView());
+                  userController.googleLogOut();
                 },
                 icon: const Icon(Icons.exit_to_app))
           ],
@@ -32,10 +32,42 @@ class HomeView extends GetView<HomeController> {
             .homeDrawer(controller.userName, controller.userPictureUrl));
   }
 
-  _body() => Center(
-        child: ElevatedButton(
-          onPressed: () {},
-          child: Text('TEST'),
+  _body() => Padding(
+      padding: EdgeInsets.all(12),
+      child: Row(children: [_firstColumn(), _secondColumn()]));
+
+  _firstColumn() => Expanded(
+      flex: 5,
+      child: ListView.builder(
+          itemCount: controller.items.length,
+          itemBuilder: (context, index) {
+            final item = controller.items[index];
+            return _itemCard(controller.items[index]);
+          }));
+
+  _secondColumn() => Expanded(
+      flex: 5,
+      child: ListView.builder(
+          itemCount: controller.items.length,
+          itemBuilder: (context, index) {
+            final item = controller.items[index];
+            return _itemCard(controller.items[index]);
+          }));
+
+  _itemCard(Item item) => Card(
+        child: ListTile(
+          title: Image.network(
+            item.image,
+            loadingBuilder: (context, child, loadingProgress) {
+              return loadingProgress == null
+                  ? child
+                  : const Center(child: CircularProgressIndicator());
+            },
+          ),
+          subtitle: Text(
+            item.name,
+            style: ThemeHelper.titleStyle,
+          ),
         ),
       );
 }
