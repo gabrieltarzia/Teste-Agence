@@ -1,12 +1,9 @@
-import 'package:agence_task/App/Controller/user.controller.dart';
 import 'package:agence_task/App/Model/item.model.dart';
+import 'package:agence_task/App/Services/user.services.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  final userController = Get.put(UserController());
-
-  final userName = ''.obs;
-  final userPictureUrl = ''.obs;
+  UserServices userServices = Get.put(UserServices());
 
   final items = [
     Item(

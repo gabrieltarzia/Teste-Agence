@@ -1,5 +1,4 @@
 import 'package:agence_task/App/Controller/home.controller.dart';
-import 'package:agence_task/App/Controller/user.controller.dart';
 import 'package:agence_task/App/Helper/theme.helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,29 +10,31 @@ class HomeView extends GetView<HomeController> {
 
   @override
   final controller = Get.put(HomeController());
-  final userController = Get.put(UserController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Obx(() {
-            return Text('Bem Vindo ' + controller.userName.value);
+            return Text(
+                'Bem Vindo ' + controller.userServices.currentUser.name.value);
           }),
           actions: [
             IconButton(
                 onPressed: () {
-                  userController.googleLogOut();
+                  controller.userServices.googleLogOut();
                 },
                 icon: const Icon(Icons.exit_to_app))
           ],
         ),
         body: _body(),
-        drawer: HomeWidgets()
-            .homeDrawer(controller.userName, controller.userPictureUrl));
+        drawer: HomeWidgets().homeDrawer(
+            controller.userServices.currentUser.name,
+            controller.userServices.currentUser.imageUrl));
   }
 
   _body() => Padding(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       child: Row(children: [_firstColumn(), _secondColumn()]));
 
   _firstColumn() => Expanded(
