@@ -1,8 +1,9 @@
+import 'package:agence_task/Locale/appMessages.dart';
+import 'package:agence_task/Routes/app_pages.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'App/Bindings/initial.binds.dart';
-import 'App/View/login.view.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,12 +18,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        initialBinding: InitBindings(),
-        theme: ThemeData(
-          primarySwatch: Colors.blueGrey,
-        ),
-        home: LoginView());
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      initialBinding: InitBindings(),
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+      ),
+      getPages: AppPages.routes,
+      initialRoute: AppPages.login,
+      translations: AppMessages(),
+      locale: const Locale('pt', 'BR'),
+      fallbackLocale: const Locale('en', 'US'),
+    );
   }
 }

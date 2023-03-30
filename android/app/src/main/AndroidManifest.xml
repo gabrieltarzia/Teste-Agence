@@ -1,5 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.agence_task">
+package="com.example.agence_task">
+
+    <queries>
+        <provider android:authorities="com.facebook.katana.provider.PlatformProvider" />
+        <provider android:authorities="com.facebook.orca.provider.PlatformProvider" />
+    </queries>
+    
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="agence_task"
@@ -39,4 +45,5 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+ 
 </manifest>

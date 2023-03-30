@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Teste Agence</string>
     <string name="facebook_app_id">3366891460306435</string>
+    <string name="fb_login_protocol_scheme">fb3366891460306435</string>
     <string name="facebook_client_token">4d947f699242396169929886b35ec535</string>
 </resources>
