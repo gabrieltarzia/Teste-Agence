@@ -12,4 +12,10 @@ class StringsContants {
   static const loginWithGoogle = 'login_with_google';
   static const userName = 'username';
   static const passWord = 'password';
+  static const welcome = 'welcome';
+  static const back = 'back';
+  static const selectLanguage = 'select_language';
+  static const brazilianPortuguese = 'brazilian_portugues';
+  static const english = 'english';
+  static const itemDetail = 'item_detail';
 }

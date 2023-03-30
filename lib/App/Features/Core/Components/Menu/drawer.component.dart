@@ -22,14 +22,12 @@ class DrawerComponent extends StatelessWidget {
               decoration: const BoxDecoration(),
               child: Column(
                 children: [
-                  Obx(
-                    () => pictureUrl == null
-                        ? const Placeholder()
-                        : CircleAvatar(
-                            radius: 60.0,
-                            backgroundImage: NetworkImage(pictureUrl!),
-                          ),
-                  ),
+                  pictureUrl == null
+                      ? const Placeholder()
+                      : CircleAvatar(
+                          radius: 60.0,
+                          backgroundImage: NetworkImage(pictureUrl!),
+                        ),
                   Text(userName)
                 ],
               ),

@@ -1,3 +1,4 @@
+import 'package:agence_task/App/App.dart';
 import 'package:agence_task/App/Features/Core/app.controller.dart';
 import 'package:agence_task/Enums/loginTypes.enum.dart';
 import 'package:agence_task/Routes/app_pages.dart';
@@ -14,21 +15,47 @@ class LoginController extends GetxController {
   final loading = false.obs;
   final AppController appController;
 
-  Future<void> tryLogin(LoginTypes loginType) async {
+  /*Future<User?> tryLogin(LoginTypes loginType) async {
     loading(true);
-    late bool result;
+    late User result;
     switch (loginType) {
       case LoginTypes.google:
-        result = await appController.userServices.googleLogin();
+        await appController.userServices.googleLogin();
+
+        result = appController.userServices.currentUser;
 
         break;
       case LoginTypes.facebook:
         result = await appController.userServices.facebookLogIn();
+        result = appController.userServices.currentUser;
+        break;
+      default:
+    }
+    result != null ? _goToHome() : _showError();
+    loading(false);
+  }*/
+
+  Future<User?> tryLogin(LoginTypes loginType) async {
+    loading(true);
+    late User result;
+    switch (loginType) {
+      case LoginTypes.google:
+
+        await appController.userServices.googleLogin();
+
+        result = appController.userServices.currentUser;
+
+        break;
+      case LoginTypes.facebook:
+
+        await appController.userServices.facebookLogIn();
+
+        result = appController.userServices.currentUser;
 
         break;
       default:
     }
-    result ? _goToHome() : _showError();
+    result.name != null ? _goToHome() : _showError();
     loading(false);
   }
 

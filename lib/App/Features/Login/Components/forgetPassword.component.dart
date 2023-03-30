@@ -1,4 +1,4 @@
-import 'package:agence_task/App/App.dart';
+import 'package:agence_task/lib.dart';
 import 'package:cupertino_text_button/cupertino_text_button.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +9,7 @@ class ForgetPassWordComponent extends StatelessWidget {
   Widget build(BuildContext context) => Center(
         child: CupertinoTextButton(
           onTap: () {},
-          text: 'Esqueci Minha Senha',
+          text: StringsContants.forgetPassWord.tr,
           style: ThemeConstants.titleStyle,
           color: Colors.white,
         ),

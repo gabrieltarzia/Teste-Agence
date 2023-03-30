@@ -13,13 +13,10 @@ class UserNameFieldComponent extends StatelessWidget {
   Widget build(BuildContext context) => TextField(
         controller: usernameController,
         style: ThemeConstants.inputFieldTitleTheme,
-        decoration: const InputDecoration(
-          hintText: StringsContants.userName,
+        decoration: InputDecoration(
+          hintText: StringsContants.userName.tr,
           hintStyle: ThemeConstants.hintTextTheme,
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: ColorConstants.secondaryColor),
-          ),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderSide:
                 BorderSide(width: 0.5, color: ColorConstants.secondaryColor),
           ),

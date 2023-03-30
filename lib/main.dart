@@ -3,7 +3,7 @@ import 'package:agence_task/Routes/app_pages.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'App/Bindings/initial.binds.dart';
+import 'App/Binding/initial.bind.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,14 +20,14 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      initialBinding: InitBindings(),
+      initialBinding: InitBinding(),
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
       getPages: AppPages.routes,
       initialRoute: AppPages.login,
       translations: AppMessages(),
-      locale: const Locale('pt', 'BR'),
+      locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),
     );
   }

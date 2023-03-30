@@ -1,4 +1,6 @@
+import 'package:agence_task/App/App.dart';
 import 'package:agence_task/App/Features/Core/Components/Menu/drawer.component.dart';
+import 'package:agence_task/App/Features/Core/Components/Menu/languageDialog.component.dart';
 import 'package:agence_task/App/Features/Home/home.controller.dart';
 import 'package:agence_task/App/Features/Core/Components/loading.component.dart';
 import 'package:flutter/material.dart';
@@ -13,13 +15,15 @@ class HomeView extends GetView<HomeController> {
     return Scaffold(
       appBar: AppBar(
         title: Obx(
-          () => Text('Bem Vindo ' +
+          () => Text(StringsContants.welcome.tr +
+              ' ' +
               controller.appController.userServices.currentUser.name.value),
         ),
         actions: [
+          const LanguageDialogComponent(),
           IconButton(
             onPressed: () {
-              controller.appController.userServices.googleLogOut();
+              controller.appController.userServices.logout();
             },
             icon: const Icon(Icons.exit_to_app),
           ),
@@ -29,7 +33,7 @@ class HomeView extends GetView<HomeController> {
       drawer: DrawerComponent(
         pictureUrl:
             controller.appController.userServices.currentUser.imageUrl(),
-        onLogoutTap: () => controller.appController.userServices.googleLogOut(),
+        onLogoutTap: () => controller.appController.userServices.logout(),
         userName: controller.appController.userServices.currentUser.name(),
       ),
     );
@@ -57,6 +61,7 @@ class HomeView extends GetView<HomeController> {
             final item = controller.itemList[index];
             return ItemCard(
               item: item,
+              goToItem: () => controller.goToItem(item),
             );
           },
         ),
