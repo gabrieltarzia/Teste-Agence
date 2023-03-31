@@ -9,5 +9,7 @@ class LoginButtonComponent extends StatelessWidget {
   Widget build(BuildContext context) => SocialLoginButton(
       text: StringsContants.login.tr,
       buttonType: SocialLoginButtonType.generalLogin,
-      onPressed: () {});
+      onPressed: () {
+        ///TODO(message): Add login button
+      });
 }

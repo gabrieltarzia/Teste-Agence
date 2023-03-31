@@ -1,7 +1,4 @@
-import 'package:agence_task/App/Features/Home/home.controller.dart';
-import 'package:agence_task/App/Features/Home/Repository/home.respository.dart';
-import 'package:agence_task/App/Features/Home/Repository/i_home.repository.dart';
-import 'package:get/get.dart';
+import 'package:agence_task/lib.dart';
 
 class HomeBinding extends Bindings {
   @override

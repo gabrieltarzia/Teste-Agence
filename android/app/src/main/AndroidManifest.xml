@@ -18,6 +18,10 @@ package="com.example.agence_task">
         <meta-data 
         android:name="com.facebook.sdk.ClientToken" 
         android:value="@string/facebook_client_token"/>
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyAuJ4P_YRxQyEeV5I4hYyMUc47j1cz7MH8"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -45,5 +49,9 @@ package="com.example.agence_task">
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
  
 </manifest>

@@ -1,7 +1,6 @@
-import 'package:agence_task/App/Features/Home/Repository/i_home.repository.dart';
-import 'package:agence_task/App/Model/item.model.dart';
+import 'package:agence_task/lib.dart';
 
-class HomeRepository implements IHomeRepository {
+class HomeRepository extends GetConnect implements IHomeRepository {
   @override
   List<Item> getItens() => [
         Item(

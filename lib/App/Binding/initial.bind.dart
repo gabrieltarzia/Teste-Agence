@@ -1,14 +1,12 @@
-import 'package:agence_task/App/Features/Core/app.controller.dart';
-import 'package:agence_task/App/Services/user.services.dart';
-import 'package:get/get.dart';
+import 'package:agence_task/lib.dart';
 
 class InitBinding extends Bindings {
   @override
   void dependencies() {
     Get
-      ..put(UserServices())
+      ..put(UserService())
       ..put(
-        AppController(
+        AppService(
           Get.find(),
         ),
       );

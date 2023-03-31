@@ -1,40 +1,24 @@
-import 'package:agence_task/App/App.dart';
-import 'package:agence_task/App/Features/Core/Components/Menu/drawer.component.dart';
-import 'package:agence_task/App/Features/Core/Components/Menu/languageDialog.component.dart';
-import 'package:agence_task/App/Features/Home/home.controller.dart';
-import 'package:agence_task/App/Features/Core/Components/loading.component.dart';
+import 'package:agence_task/lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'Components/itemCard.component.dart';
 
 class HomeView extends GetView<HomeController> {
-  HomeView({Key? key}) : super(key: key);
+  const HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Obx(
-          () => Text(StringsContants.welcome.tr +
-              ' ' +
-              controller.appController.userServices.currentUser.name.value),
-        ),
-        actions: [
-          const LanguageDialogComponent(),
-          IconButton(
-            onPressed: () {
-              controller.appController.userServices.logout();
-            },
-            icon: const Icon(Icons.exit_to_app),
-          ),
+        title: Text(StringsContants.welcome.tr +
+            controller.appService.userServices.currentUser.name),
+        actions: const [
+          LanguageDialogComponent(),
         ],
       ),
       body: _body(),
       drawer: DrawerComponent(
-        pictureUrl:
-            controller.appController.userServices.currentUser.imageUrl(),
-        onLogoutTap: () => controller.appController.userServices.logout(),
-        userName: controller.appController.userServices.currentUser.name(),
+        pictureUrl: controller.appService.userServices.currentUser.imageUrl,
+        userName: controller.appService.userServices.currentUser.name,
+        logOutFunction: controller.appService.userServices.logout,
       ),
     );
   }

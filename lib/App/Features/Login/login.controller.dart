@@ -1,68 +1,33 @@
-import 'package:agence_task/App/App.dart';
-import 'package:agence_task/App/Features/Core/app.controller.dart';
-import 'package:agence_task/Enums/loginTypes.enum.dart';
-import 'package:agence_task/Routes/app_pages.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:agence_task/lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class LoginController extends GetxController {
-  LoginController(this.appController);
+  LoginController(this.appService);
   TextEditingController emailController = TextEditingController();
   TextEditingController passWordController = TextEditingController();
   final obscurePassWord = true.obs;
 
   final loading = false.obs;
-  final AppController appController;
 
-  /*Future<User?> tryLogin(LoginTypes loginType) async {
+  final AppService appService;
+
+  Future<void> tryLogin(LoginTypes loginType) async {
     loading(true);
-    late User result;
-    switch (loginType) {
-      case LoginTypes.google:
-        await appController.userServices.googleLogin();
-
-        result = appController.userServices.currentUser;
-
-        break;
-      case LoginTypes.facebook:
-        result = await appController.userServices.facebookLogIn();
-        result = appController.userServices.currentUser;
-        break;
-      default:
-    }
-    result != null ? _goToHome() : _showError();
+    final result = await appService.tryLogin(loginType);
+    appService.userServices.getUserLocation();
     loading(false);
-  }*/
-
-  Future<User?> tryLogin(LoginTypes loginType) async {
-    loading(true);
-    late User result;
-    switch (loginType) {
-      case LoginTypes.google:
-
-        await appController.userServices.googleLogin();
-
-        result = appController.userServices.currentUser;
-
-        break;
-      case LoginTypes.facebook:
-
-        await appController.userServices.facebookLogIn();
-
-        result = appController.userServices.currentUser;
-
-        break;
-      default:
-    }
-    result.name != null ? _goToHome() : _showError();
-    loading(false);
+    result ? _goToHome() : _showError();
   }
 
   void _showError() {
-    GetSnackBar _snackBar = const GetSnackBar(
-      title: 'Erro',
-      message: 'Houve Um Erro',
+    GetSnackBar _snackBar = GetSnackBar(
+      duration: const Duration(seconds: 3),
+      icon: const Icon(
+        Icons.error,
+        color: Colors.red,
+      ),
+      title: StringsContants.error.tr,
+      message: StringsContants.errorMessage.tr,
     );
     Get.showSnackbar(_snackBar);
   }

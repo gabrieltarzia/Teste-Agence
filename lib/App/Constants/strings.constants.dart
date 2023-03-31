@@ -1,3 +1,5 @@
+import 'package:flutter/services.dart';
+
 class StringsContants {
   static const hello = 'hello';
   static const loginWithYourAccount = 'login_with_your_account';
@@ -18,4 +20,13 @@ class StringsContants {
   static const brazilianPortuguese = 'brazilian_portugues';
   static const english = 'english';
   static const itemDetail = 'item_detail';
+  static const error = 'error';
+  static const errorMessage = 'error_message';
+  static const buy = 'buy';
+  static const cancel = 'cancel';
+  static const confirm = 'confirm';
+  static const confirmBuy = 'confirm_buy';
+  static const successBuy = 'succes_buy';
+  static const succefulBuyMessege = 'succes_buy_messege';
+  static const locationError = 'location_error';
 }

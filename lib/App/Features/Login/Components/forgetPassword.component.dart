@@ -8,9 +8,11 @@ class ForgetPassWordComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Center(
         child: CupertinoTextButton(
-          onTap: () {},
+          onTap: () {
+            ///TODO(message):Add reset password function
+          },
           text: StringsContants.forgetPassWord.tr,
-          style: ThemeConstants.titleStyle,
+          style: ThemeConstants.titleTextStyle,
           color: Colors.white,
         ),
       );

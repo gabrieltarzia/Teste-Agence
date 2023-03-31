@@ -1,14 +1,10 @@
-import 'package:agence_task/App/Features/Core/app.controller.dart';
-import 'package:agence_task/App/Features/Home/Repository/i_home.repository.dart';
-import 'package:agence_task/App/Model/item.model.dart';
-import 'package:agence_task/Routes/app_pages.dart';
-import 'package:get/get.dart';
+import 'package:agence_task/lib.dart';
 
 class HomeController extends GetxController {
-  HomeController(this._homeRepository, this.appController);
+  HomeController(this._homeRepository, this.appService);
 
   final IHomeRepository _homeRepository;
-  final AppController appController;
+  final AppService appService;
 
   final loading = false.obs;
 

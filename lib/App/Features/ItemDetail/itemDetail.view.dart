@@ -1,10 +1,5 @@
-import 'package:agence_task/App/Features/ItemDetail/Components/ItemDetail.component.dart';
-import 'package:agence_task/App/Features/ItemDetail/Components/buyButton.component.dart';
-import 'package:agence_task/App/Features/ItemDetail/Components/userLocation.component.dart';
 import 'package:agence_task/lib.dart';
 import 'package:flutter/material.dart';
-
-import 'itemDetail.controller.dart';
 
 class ItemDetailView extends GetView<ItemDetailController> {
   const ItemDetailView({
@@ -21,11 +16,11 @@ class ItemDetailView extends GetView<ItemDetailController> {
 
   _body() => ListView(
         children: [
-          const UserLocationComponent(),
+          UserLocationComponent(),
           ItemDetailComponent(
             item: controller.item,
           ),
-          const BuyButtonComponent(),
+          BuyButtonComponent(),
         ],
       );
 }

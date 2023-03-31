@@ -1,19 +1,8 @@
-import 'package:agence_task/App/Constants/path.constants.dart';
-import 'package:agence_task/App/Constants/strings.constants.dart';
-import 'package:agence_task/App/Features/Login/Components/forgetPassword.component.dart';
-import 'package:agence_task/App/Features/Login/Components/loginButton.component.dart';
-import 'package:agence_task/App/Features/Login/login.controller.dart';
-import 'package:agence_task/App/Constants/colors.constants.dart';
-import 'package:agence_task/App/Constants/theme.constants.dart';
-import 'package:agence_task/App/Features/Core/Components/loading.component.dart';
-import 'package:agence_task/App/Features/Login/Components/socialLogin.component.dart';
+import 'package:agence_task/lib.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'Components/passwordField.component.dart';
-import 'Components/userNameFiel.component.dart';
 
 class LoginView extends GetView<LoginController> {
-  LoginView({Key? key}) : super(key: key);
+  const LoginView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +28,7 @@ class LoginView extends GetView<LoginController> {
                       Center(
                         child: Text(
                           StringsContants.loginWithYourAccount.tr,
-                          style: ThemeConstants.inputFieldTitleTheme,
+                          style: ThemeConstants.inputFieldTitleStyle,
                         ),
                       ),
                       const Divider(),

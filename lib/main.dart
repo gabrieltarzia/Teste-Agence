@@ -1,9 +1,6 @@
-import 'package:agence_task/Locale/appMessages.dart';
-import 'package:agence_task/Routes/app_pages.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'App/Binding/initial.bind.dart';
+import 'lib.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

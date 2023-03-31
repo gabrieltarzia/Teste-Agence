@@ -1,10 +1,4 @@
-import 'package:agence_task/App/Features/Login/login.binding.dart';
 import 'package:agence_task/lib.dart';
-import '../App/Features/Home/home.binding.dart';
-import '../App/Features/Home/home.view.dart';
-import '../App/Features/ItemDetail/itemDetail.binding.dart';
-import '../App/Features/ItemDetail/itemDetail.view.dart';
-import '../App/Features/Login/login.view.dart';
 
 class AppPages {
   static const login = '/login';
@@ -13,17 +7,17 @@ class AppPages {
   static final List<GetPage<dynamic>> routes = [
     GetPage(
       name: login,
-      page: () => LoginView(),
+      page: () => const LoginView(),
       binding: LoginBinding(),
     ),
     GetPage(
       name: home,
-      page: () => HomeView(),
+      page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
       name: itemDetail,
-      page: () => ItemDetailView(),
+      page: () => const ItemDetailView(),
       binding: ItemDetailBinding(),
     ),
   ];

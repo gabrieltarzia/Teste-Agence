@@ -16,12 +16,12 @@ class ItemCard extends StatelessWidget {
           loadingBuilder: (context, child, loadingProgress) {
             return loadingProgress == null
                 ? child
-                : const Center(child: CircularProgressIndicator());
+                : const Center(child: LoadingComponent());
           },
         ),
         subtitle: Text(
           item.name,
-          style: ThemeConstants.titleStyle,
+          style: ThemeConstants.titleTextStyle,
         ),
       ),
     );

@@ -1,10 +1,8 @@
-import 'package:agence_task/App/App.dart';
-import 'package:agence_task/App/Features/Core/app.controller.dart';
+import 'package:agence_task/lib.dart';
 import 'package:cupertino_text_button/cupertino_text_button.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-class LanguageDialogComponent extends GetView<AppController> {
+class LanguageDialogComponent extends GetView<AppService> {
   const LanguageDialogComponent({Key? key}) : super(key: key);
 
   @override
@@ -22,15 +20,15 @@ class LanguageDialogComponent extends GetView<AppController> {
                   controller.changeLanguage(
                     const Locale('pt', 'BR'),
                   );
-                  Get.back();
+                  _closeMenu();
                 },
                 child: Text(StringsContants.brazilianPortuguese.tr)),
             ElevatedButton(
                 onPressed: () {
                   controller.changeLanguage(
-                    const Locale('pt', 'BR'),
+                    const Locale('en', 'US'),
                   );
-                  Get.back();
+                  _closeMenu();
                 },
                 child: Text(StringsContants.english.tr))
           ],
@@ -38,9 +36,11 @@ class LanguageDialogComponent extends GetView<AppController> {
         actions: [
           CupertinoTextButton(
               onTap: () {
-                Get.back();
+                _closeMenu();
               },
               text: StringsContants.back.tr),
         ],
       );
+
+  void _closeMenu() => Get.back();
 }

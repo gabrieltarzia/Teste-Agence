@@ -14,10 +14,10 @@ class _PassWordFieldComponentState extends State<PassWordFieldComponent> {
   @override
   Widget build(BuildContext context) => TextField(
         obscureText: widget.obscureText,
-        style: ThemeConstants.inputFieldTitleTheme,
+        style: ThemeConstants.inputFieldTitleStyle,
         decoration: InputDecoration(
           hintText: StringsContants.passWord.tr,
-          hintStyle: ThemeConstants.hintTextTheme,
+          hintStyle: ThemeConstants.hintTextStyle,
           suffixIcon: _obscurePassword(widget.obscureText),
           enabledBorder: const OutlineInputBorder(
             borderSide:

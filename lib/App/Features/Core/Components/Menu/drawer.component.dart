@@ -6,12 +6,12 @@ class DrawerComponent extends StatelessWidget {
       {Key? key,
       required this.userName,
       this.pictureUrl,
-      required this.onLogoutTap})
+      required this.logOutFunction})
       : super(key: key);
 
   final String userName;
   final String? pictureUrl;
-  final Function onLogoutTap;
+  final Function logOutFunction;
 
   @override
   Widget build(BuildContext context) => Drawer(
@@ -47,7 +47,7 @@ class DrawerComponent extends StatelessWidget {
             ListTile(
               title: Text(StringsContants.logout.tr),
               onTap: () {
-                onLogoutTap();
+                logOutFunction();
               },
             ),
           ],
