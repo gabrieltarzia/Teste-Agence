@@ -1,9 +1,4 @@
-import 'package:agence_task/App/Features/MyItens/myItens.binding.dart';
-import 'package:agence_task/App/Features/MyItens/myItens.view.dart';
-import 'package:agence_task/App/Features/Settings/settings.binding.dart';
 import 'package:agence_task/lib.dart';
-
-import '../App/Features/Settings/settings.view.dart';
 
 class AppPages {
   static const login = '/login';

@@ -43,7 +43,7 @@ class LoginView extends GetView<LoginController> {
                         obscureText: controller.obscurePassWord(),
                       ),
                       const Divider(),
-                      ForgetPassWordComponent(),
+                      const ForgetPassWordComponent(),
                       const Divider(),
                       const LoginButtonComponent(),
                       const SizedBox(
