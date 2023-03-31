@@ -7,10 +7,15 @@ package="com.example.agence_task">
     </queries>
     
     <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    
    <application
-        android:label="agence_task"
+        android:label="Agence App"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launch_icon">
 
         <meta-data 
         android:name="com.facebook.sdk.ApplicationId" 
@@ -50,8 +55,6 @@ package="com.example.agence_task">
             android:value="2" />
     </application>
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    
  
 </manifest>

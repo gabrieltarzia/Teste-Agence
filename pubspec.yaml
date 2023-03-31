@@ -44,6 +44,22 @@ dependencies:
   cupertino_text_button: ^0.0.5
   google_maps_flutter: ^2.2.5
   geolocator: ^9.0.2
+  flutter_native_splash: ^2.2.19
+  flutter_launcher_icons: ^0.12.0
+
+flutter_native_splash:
+  color: "#000000"
+  image: "lib/Assets/Splash/splash.png"
+  android: true
+  ios: true
+
+flutter_icons:
+  image_path: "lib/Assets/Icons/agence_icon.png"  
+  ios: true
+  remove_alpha_ios: true
+  android: "launch_icon"
+  adaptive_icon_background: "#111D28"
+  adaptive_icon_foreground: "lib/Assets/Icons/agence_android_icon.png"
 
 dev_dependencies:
   flutter_test:

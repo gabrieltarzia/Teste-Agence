@@ -16,11 +16,11 @@ class ItemDetailView extends GetView<ItemDetailController> {
 
   _body() => ListView(
         children: [
-          UserLocationComponent(),
+          const UserLocationComponent(),
           ItemDetailComponent(
             item: controller.iten,
           ),
-          BuyButtonComponent(),
+          const BuyButtonComponent(),
         ],
       );
 }

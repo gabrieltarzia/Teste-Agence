@@ -13,13 +13,13 @@ class AppService extends GetxService {
   @override
   void onInit() {
     if (userServices.currentUser.name != '') {
-      /// TODO:(message): Recuperar usuario do LocalStorage
+      /// TODO:(message): Get user from LocalStorage
     }
     super.onInit();
   }
 
   Future<bool> tryLogin(LoginTypes loginType) async {
-    ///TODO:(message) : Salvar o usuario no LocalStorage
+    ///TODO:(message) : Save user to LocalStorage
 
     late bool result;
     switch (loginType) {

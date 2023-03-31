@@ -15,7 +15,7 @@ class BuyButtonComponent extends StatelessWidget {
           text: StringsContants.buy.tr,
           backgroundColor: Colors.orange,
           onPressed: () {
-            Get.bottomSheet(BuyConfirmComponent());
+            Get.bottomSheet(const BuyConfirmComponent());
           },
         ),
       );

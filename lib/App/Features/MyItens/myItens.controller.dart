@@ -3,7 +3,7 @@ import 'package:agence_task/lib.dart';
 
 class MyItensController extends GetxController {
   MyItensController(this._myItensRepository);
-  IMyItensRepository _myItensRepository;
+  final IMyItensRepository _myItensRepository;
 
   final loading = false.obs;
   final myItensList = <Iten>[].obs;

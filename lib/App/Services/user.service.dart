@@ -30,6 +30,7 @@ class UserService extends GetxService {
 
   Future<Position> _getCurrentPosition() async {
     LocationPermission locationPermission;
+
     bool enabled = await Geolocator.isLocationServiceEnabled();
     if (!enabled) {
       return Future.error('Habilite As Permissões De Localização');
@@ -38,12 +39,14 @@ class UserService extends GetxService {
     locationPermission = await Geolocator.checkPermission();
 
     if (locationPermission == LocationPermission.denied) {
+      Geolocator.requestPermission();
       locationPermission = await Geolocator.checkPermission();
       if (locationPermission == LocationPermission.denied) {
         return Future.error('Permissão Negada');
       }
     }
     if (locationPermission == LocationPermission.deniedForever) {
+      Geolocator.requestPermission();
       return Future.error('Permissão Negada');
     }
 

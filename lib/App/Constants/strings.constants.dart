@@ -1,5 +1,3 @@
-import 'package:flutter/services.dart';
-
 class StringsContants {
   static const hello = 'hello';
   static const loginWithYourAccount = 'login_with_your_account';

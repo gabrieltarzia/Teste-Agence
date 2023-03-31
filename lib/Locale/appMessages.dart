@@ -74,15 +74,15 @@ Registration date: 00/00/0000
           StringsContants.locationError: 'Permissões De Localização Negadas',
           StringsContants.userInformationTitle: 'Informações Do Usuário',
           StringsContants.noItens: 'Sem Itens Comprados',
+          StringsContants.insertEmail: 'Insira Seu Email',
+          StringsContants.resetPasswordEmail:
+              'Nova Senha Enviada Para Seu Email',
           StringsContants.userInformation: '''
 Nome: nome do usuário atual
 Email: email do usuário atual
 Data de nasciment: data de nascimento do usuário atual
 Data de cadastro: 00/00/0000
 ''',
-          StringsContants.resetPasswordEmail:
-              'Nova Senha Enviada Para Seu Email',
-          StringsContants.insertEmail: 'Insira Seu Email',
         }
       };
 }

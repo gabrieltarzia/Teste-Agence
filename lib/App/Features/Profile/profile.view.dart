@@ -1,9 +1,6 @@
 import 'package:agence_task/lib.dart';
 import 'package:flutter/material.dart';
 
-import 'Components/UserUpperCard.component.dart';
-import 'Components/userInformationCard.component.dart';
-
 class ProfileView extends GetView<ProfileController> {
   const ProfileView({Key? key}) : super(key: key);
 

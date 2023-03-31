@@ -11,10 +11,17 @@ class LoginController extends GetxController {
 
   final AppService appService;
 
+  @override
+  void onInit() {
+    appService.userServices.getUserLocation();
+    super.onInit();
+  }
+
   Future<void> tryLogin(LoginTypes loginType) async {
     loading(true);
+
     final result = await appService.tryLogin(loginType);
-    appService.userServices.getUserLocation();
+
     loading(false);
     result ? _goToHome() : _showError();
   }
@@ -23,7 +30,6 @@ class LoginController extends GetxController {
     emailController.text.isEmpty
         ? _insertEmailMessage()
         : {
-            appService.userServices.getUserLocation(),
             appService.userServices.currentUser = User(
                 name: emailController.text,
                 imageUrl: PathConstants.blankUserPath),
@@ -42,7 +48,6 @@ class LoginController extends GetxController {
         Icons.email,
         color: Colors.green,
       ),
-      title: StringsContants.error.tr,
       message: StringsContants.resetPasswordEmail.tr,
     );
     Get.showSnackbar(_snackBar);
