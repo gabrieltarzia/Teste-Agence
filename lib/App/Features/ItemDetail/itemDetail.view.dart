@@ -18,7 +18,7 @@ class ItemDetailView extends GetView<ItemDetailController> {
         children: [
           UserLocationComponent(),
           ItemDetailComponent(
-            item: controller.item,
+            item: controller.iten,
           ),
           BuyButtonComponent(),
         ],

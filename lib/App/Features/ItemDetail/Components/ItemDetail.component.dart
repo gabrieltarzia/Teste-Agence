@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class ItemDetailComponent extends StatelessWidget {
   const ItemDetailComponent({Key? key, required this.item}) : super(key: key);
-  final Item item;
+  final Iten item;
   @override
   Widget build(BuildContext context) => Row(
         children: [

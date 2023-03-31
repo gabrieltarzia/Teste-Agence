@@ -2,7 +2,7 @@ import 'package:agence_task/lib.dart';
 import 'package:flutter/material.dart';
 import 'package:social_login_buttons/social_login_buttons.dart';
 
-class LoginButtonComponent extends StatelessWidget {
+class LoginButtonComponent extends GetView<LoginController> {
   const LoginButtonComponent({Key? key}) : super(key: key);
 
   @override
@@ -10,6 +10,6 @@ class LoginButtonComponent extends StatelessWidget {
       text: StringsContants.login.tr,
       buttonType: SocialLoginButtonType.generalLogin,
       onPressed: () {
-        ///TODO(message): Add login button
+        controller.tryUsernameLogin();
       });
 }

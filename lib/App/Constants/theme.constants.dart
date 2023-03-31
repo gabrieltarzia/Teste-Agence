@@ -19,4 +19,7 @@ class ThemeConstants {
 
   static const titleTextStyle = TextStyle(
       color: Colors.grey, fontSize: 16, fontFamily: 'Times New Toman');
+
+      static const nameTextStyle = TextStyle(
+      color: Colors.black, fontSize: 24, fontFamily: 'Times New Toman');
 }

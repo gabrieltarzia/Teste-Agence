@@ -25,7 +25,6 @@ class BuyConfirmComponent extends GetView<ItemDetailController> {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      Get.back();
                       _buySnackBar();
                     },
                     child: Text(StringsContants.confirm.tr),
@@ -49,14 +48,14 @@ class BuyConfirmComponent extends GetView<ItemDetailController> {
                       child: Column(
                     children: [
                       Text(
-                        controller.item.name,
+                        controller.iten.name,
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
                         height: 387,
                         width: 387,
                         child: Image.network(
-                          controller.item.image,
+                          controller.iten.image,
                           loadingBuilder: (context, child, loadingProgress) {
                             return loadingProgress == null
                                 ? child
@@ -83,6 +82,7 @@ class BuyConfirmComponent extends GetView<ItemDetailController> {
       title: StringsContants.successBuy.tr,
       message: StringsContants.succefulBuyMessege.tr,
     );
+    Get.offAllNamed(AppPages.home);
     Get.showSnackbar(_snackBar);
   }
 }

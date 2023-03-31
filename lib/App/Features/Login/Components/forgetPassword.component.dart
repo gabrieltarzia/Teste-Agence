@@ -2,14 +2,14 @@ import 'package:agence_task/lib.dart';
 import 'package:cupertino_text_button/cupertino_text_button.dart';
 import 'package:flutter/material.dart';
 
-class ForgetPassWordComponent extends StatelessWidget {
+class ForgetPassWordComponent extends GetView<LoginController> {
   ForgetPassWordComponent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) => Center(
         child: CupertinoTextButton(
           onTap: () {
-            ///TODO(message):Add reset password function
+            controller.resetPassword();
           },
           text: StringsContants.forgetPassWord.tr,
           style: ThemeConstants.titleTextStyle,

@@ -19,6 +19,48 @@ class LoginController extends GetxController {
     result ? _goToHome() : _showError();
   }
 
+  void tryUsernameLogin() {
+    emailController.text.isEmpty
+        ? _insertEmailMessage()
+        : {
+            appService.userServices.getUserLocation(),
+            appService.userServices.currentUser = User(
+                name: emailController.text,
+                imageUrl: PathConstants.blankUserPath),
+            _goToHome()
+          };
+  }
+
+  void resetPassword() => emailController.text.isEmpty
+      ? _insertEmailMessage()
+      : _resetEmailMessage();
+
+  void _resetEmailMessage() {
+    GetSnackBar _snackBar = GetSnackBar(
+      duration: const Duration(seconds: 3),
+      icon: const Icon(
+        Icons.email,
+        color: Colors.green,
+      ),
+      title: StringsContants.error.tr,
+      message: StringsContants.resetPasswordEmail.tr,
+    );
+    Get.showSnackbar(_snackBar);
+  }
+
+  void _insertEmailMessage() {
+    GetSnackBar _snackBar = GetSnackBar(
+      duration: const Duration(seconds: 3),
+      icon: const Icon(
+        Icons.error,
+        color: Colors.red,
+      ),
+      title: StringsContants.error.tr,
+      message: StringsContants.resetPasswordEmail.tr,
+    );
+    Get.showSnackbar(_snackBar);
+  }
+
   void _showError() {
     GetSnackBar _snackBar = GetSnackBar(
       duration: const Duration(seconds: 3),

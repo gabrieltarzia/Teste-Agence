@@ -31,7 +31,17 @@ class AppMessages extends Translations {
           StringsContants.confirmBuy: 'Confirmar Compra',
           StringsContants.successBuy: 'Succes',
           StringsContants.succefulBuyMessege: 'Succeful Buy',
-          StringsContants.locationError: 'Location Permission Denied'
+          StringsContants.locationError: 'Location Permission Denied',
+          StringsContants.userInformationTitle: 'User Information',
+          StringsContants.noItens: 'No Owned Itens',
+          StringsContants.userInformation: '''
+Name: current user name
+Email: current user's email
+Date of birth: current user's date of birth
+Registration date: 00/00/0000
+''',
+          StringsContants.resetPasswordEmail: 'New Password Sent To Your Email',
+          StringsContants.insertEmail: 'Insert Your Email',
         },
         'pt_BR': {
           StringsContants.hello: 'olá mundo',
@@ -62,6 +72,17 @@ class AppMessages extends Translations {
           StringsContants.successBuy: 'Sucesso',
           StringsContants.succefulBuyMessege: 'Compra Efetuada',
           StringsContants.locationError: 'Permissões De Localização Negadas',
+          StringsContants.userInformationTitle: 'Informações Do Usuário',
+          StringsContants.noItens: 'Sem Itens Comprados',
+          StringsContants.userInformation: '''
+Nome: nome do usuário atual
+Email: email do usuário atual
+Data de nasciment: data de nascimento do usuário atual
+Data de cadastro: 00/00/0000
+''',
+          StringsContants.resetPasswordEmail:
+              'Nova Senha Enviada Para Seu Email',
+          StringsContants.insertEmail: 'Insira Seu Email',
         }
       };
 }

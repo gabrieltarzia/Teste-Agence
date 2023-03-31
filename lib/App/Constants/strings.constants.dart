@@ -29,4 +29,9 @@ class StringsContants {
   static const successBuy = 'succes_buy';
   static const succefulBuyMessege = 'succes_buy_messege';
   static const locationError = 'location_error';
+  static const userInformationTitle = 'user_information_title';
+  static const userInformation = 'user_information';
+  static const noItens = 'no_itens';
+  static const resetPasswordEmail = 'reset_email_password';
+  static const insertEmail = 'reset_email_password';
 }

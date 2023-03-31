@@ -8,7 +8,7 @@ class HomeController extends GetxController {
 
   final loading = false.obs;
 
-  final itemList = <Item>[].obs;
+  final itemList = <Iten>[].obs;
 
   @override
   void onInit() {
@@ -23,5 +23,5 @@ class HomeController extends GetxController {
     loading(false);
   }
 
-  void goToItem(Item item) => Get.toNamed(AppPages.itemDetail, arguments: item);
+  void goToItem(Iten item) => Get.toNamed(AppPages.itemDetail, arguments: item);
 }
