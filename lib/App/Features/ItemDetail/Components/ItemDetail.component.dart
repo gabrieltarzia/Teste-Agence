@@ -17,7 +17,7 @@ class ItemDetailComponent extends StatelessWidget {
                 loadingBuilder: (context, child, loadingProgress) {
                   return loadingProgress == null
                       ? child
-                      : const Center(child: LoadingComponent());
+                      : const LoadingComponent();
                 },
               ),
             ),

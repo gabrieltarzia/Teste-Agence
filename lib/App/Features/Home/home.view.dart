@@ -8,7 +8,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(StringsContants.welcome.tr +
+        title: Text(StringsConstants.welcome.tr +
             controller.appService.userServices.currentUser.name),
         actions: const [
           LanguageDialogComponent(),

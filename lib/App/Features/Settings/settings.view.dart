@@ -7,7 +7,7 @@ class SettingsView extends GetView<SettingsController> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text(StringsContants.settings.tr),
+          title: Text(StringsConstants.settings.tr),
         ),
         body: _body(),
       );
@@ -20,7 +20,7 @@ class SettingsView extends GetView<SettingsController> {
             child: Row(
               children: [
                 const Card(child: LanguageDialogComponent()),
-                Text(StringsContants.selectLanguage.tr),
+                Text(StringsConstants.selectLanguage.tr),
               ],
             ),
           ),
@@ -30,7 +30,7 @@ class SettingsView extends GetView<SettingsController> {
             child: Row(
               children: [
                 const Card(child: LanguageDialogComponent()),
-                Text(StringsContants.selectLanguage.tr),
+                Text(StringsConstants.selectLanguage.tr),
               ],
             ),
           ),
@@ -40,7 +40,7 @@ class SettingsView extends GetView<SettingsController> {
             child: Row(
               children: [
                 const Card(child: LanguageDialogComponent()),
-                Text(StringsContants.selectLanguage.tr),
+                Text(StringsConstants.selectLanguage.tr),
               ],
             ),
           ),

@@ -10,12 +10,12 @@ class UserInformationCardComponent extends StatelessWidget {
         child: Card(
           child: ListTile(
             title: Text(
-              StringsContants.userInformationTitle.tr,
+              StringsConstants.userInformationTitle.tr,
               style: ThemeConstants.nameTextStyle,
               textAlign: TextAlign.center,
             ),
             subtitle: Text(
-              StringsContants.userInformation.tr,
+              StringsConstants.userInformation.tr,
               textAlign: TextAlign.center,
             ),
           ),

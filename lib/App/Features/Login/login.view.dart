@@ -27,7 +27,7 @@ class LoginView extends GetView<LoginController> {
                       ),
                       Center(
                         child: Text(
-                          StringsContants.loginWithYourAccount.tr,
+                          StringsConstants.loginWithYourAccount.tr,
                           style: ThemeConstants.inputFieldTitleStyle,
                         ),
                       ),

@@ -12,13 +12,13 @@ class SocialLoginComponent extends GetView<LoginController> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             SocialLoginButton(
-              text: StringsContants.loginWithGoogle.tr,
+              text: StringsConstants.loginWithGoogle.tr,
               buttonType: SocialLoginButtonType.google,
               mode: SocialLoginButtonMode.single,
               onPressed: () => controller.tryLogin(LoginTypes.google),
             ),
             SocialLoginButton(
-              text: StringsContants.loginWithFacebook.tr,
+              text: StringsConstants.loginWithFacebook.tr,
               buttonType: SocialLoginButtonType.facebook,
               mode: SocialLoginButtonMode.single,
               onPressed: () => controller.tryLogin(LoginTypes.facebook),

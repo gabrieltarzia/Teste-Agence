@@ -11,13 +11,12 @@ class UserUpperCardComponent extends GetView<ProfileController> {
           SizedBox(
             height: Get.height / 4,
             width: Get.width,
-            child: Container(
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image:
-                          NetworkImage(PathConstants.backgroundProfilePath))),
-            ),
+            child: Image.network(PathConstants.backgroundProfilePath,
+                fit: BoxFit.cover,
+                loadingBuilder: (context, child, loadingProgress) =>
+                    loadingProgress == null
+                        ? child
+                        : const Center(child: LinearProgressIndicator())),
           ),
           CircleAvatar(
             radius: 124,

@@ -6,7 +6,7 @@ class ProfileView extends GetView<ProfileController> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: Text(StringsContants.profile.tr)),
+        appBar: AppBar(title: Text(StringsConstants.profile.tr)),
         body: _body(),
       );
 

@@ -33,7 +33,7 @@ class UserService extends GetxService {
 
     bool enabled = await Geolocator.isLocationServiceEnabled();
     if (!enabled) {
-      return Future.error('Habilite As Permissões De Localização');
+      return Future.error(StringsConstants.enableLocationPermission.tr);
     }
 
     locationPermission = await Geolocator.checkPermission();
@@ -42,12 +42,12 @@ class UserService extends GetxService {
       Geolocator.requestPermission();
       locationPermission = await Geolocator.checkPermission();
       if (locationPermission == LocationPermission.denied) {
-        return Future.error('Permissão Negada');
+        return Future.error(StringsConstants.deniedLocationPermission.tr);
       }
     }
     if (locationPermission == LocationPermission.deniedForever) {
       Geolocator.requestPermission();
-      return Future.error('Permissão Negada');
+      return Future.error(StringsConstants.deniedLocationPermission.tr);
     }
 
     return await Geolocator.getCurrentPosition();

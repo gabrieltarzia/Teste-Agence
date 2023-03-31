@@ -1,4 +1,4 @@
-class StringsContants {
+class StringsConstants {
   static const hello = 'hello';
   static const loginWithYourAccount = 'login_with_your_account';
   static const forgetPassWord = 'forget_password';
@@ -32,4 +32,6 @@ class StringsContants {
   static const noItens = 'no_itens';
   static const resetPasswordEmail = 'reset_email_password';
   static const insertEmail = 'reset_email_password';
+  static const enableLocationPermission = 'enable_location_permission';
+  static const deniedLocationPermission = 'denied_location_permission';
 }

@@ -12,7 +12,7 @@ class BuyButtonComponent extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: SocialLoginButton(
           buttonType: SocialLoginButtonType.generalLogin,
-          text: StringsContants.buy.tr,
+          text: StringsConstants.buy.tr,
           backgroundColor: Colors.orange,
           onPressed: () {
             Get.bottomSheet(const BuyConfirmComponent());

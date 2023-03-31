@@ -33,25 +33,25 @@ class DrawerComponent extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: Text(StringsContants.profile.tr),
+              title: Text(StringsConstants.profile.tr),
               onTap: () {
                 Get.toNamed(AppPages.profile);
               },
             ),
             ListTile(
-              title: Text(StringsContants.myItens.tr),
+              title: Text(StringsConstants.myItens.tr),
               onTap: () {
                 Get.toNamed(AppPages.myIten);
               },
             ),
             ListTile(
-              title: Text(StringsContants.settings.tr),
+              title: Text(StringsConstants.settings.tr),
               onTap: () {
                 Get.toNamed(AppPages.settings);
               },
             ),
             ListTile(
-              title: Text(StringsContants.logout.tr),
+              title: Text(StringsConstants.logout.tr),
               onTap: () {
                 logOutFunction();
               },

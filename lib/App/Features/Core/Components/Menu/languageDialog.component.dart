@@ -12,7 +12,7 @@ class LanguageDialogComponent extends GetView<AppService> {
       );
 
   void _openDialogMenu() => Get.defaultDialog(
-        title: StringsContants.selectLanguage.tr,
+        title: StringsConstants.selectLanguage.tr,
         content: Column(
           children: [
             ElevatedButton(
@@ -22,7 +22,7 @@ class LanguageDialogComponent extends GetView<AppService> {
                   );
                   _closeMenu();
                 },
-                child: Text(StringsContants.brazilianPortuguese.tr)),
+                child: Text(StringsConstants.brazilianPortuguese.tr)),
             ElevatedButton(
                 onPressed: () {
                   controller.changeLanguage(
@@ -30,7 +30,7 @@ class LanguageDialogComponent extends GetView<AppService> {
                   );
                   _closeMenu();
                 },
-                child: Text(StringsContants.english.tr))
+                child: Text(StringsConstants.english.tr))
           ],
         ),
         actions: [
@@ -38,7 +38,7 @@ class LanguageDialogComponent extends GetView<AppService> {
               onTap: () {
                 _closeMenu();
               },
-              text: StringsContants.back.tr),
+              text: StringsConstants.back.tr),
         ],
       );
 

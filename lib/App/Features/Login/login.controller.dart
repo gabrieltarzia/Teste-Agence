@@ -48,7 +48,7 @@ class LoginController extends GetxController {
         Icons.email,
         color: Colors.green,
       ),
-      message: StringsContants.resetPasswordEmail.tr,
+      message: StringsConstants.resetPasswordEmail.tr,
     );
     Get.showSnackbar(_snackBar);
   }
@@ -60,8 +60,8 @@ class LoginController extends GetxController {
         Icons.error,
         color: Colors.red,
       ),
-      title: StringsContants.error.tr,
-      message: StringsContants.resetPasswordEmail.tr,
+      title: StringsConstants.error.tr,
+      message: StringsConstants.resetPasswordEmail.tr,
     );
     Get.showSnackbar(_snackBar);
   }
@@ -73,8 +73,8 @@ class LoginController extends GetxController {
         Icons.error,
         color: Colors.red,
       ),
-      title: StringsContants.error.tr,
-      message: StringsContants.errorMessage.tr,
+      title: StringsConstants.error.tr,
+      message: StringsConstants.errorMessage.tr,
     );
     Get.showSnackbar(_snackBar);
   }

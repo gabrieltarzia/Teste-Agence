@@ -14,9 +14,7 @@ class ItemCard extends StatelessWidget {
         title: Image.network(
           item.image,
           loadingBuilder: (context, child, loadingProgress) {
-            return loadingProgress == null
-                ? child
-                : const Center(child: LoadingComponent());
+            return loadingProgress == null ? child : const LoadingComponent();
           },
         ),
         subtitle: Text(

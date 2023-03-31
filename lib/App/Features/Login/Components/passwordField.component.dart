@@ -16,7 +16,7 @@ class _PassWordFieldComponentState extends State<PassWordFieldComponent> {
         obscureText: widget.obscureText,
         style: ThemeConstants.inputFieldTitleStyle,
         decoration: InputDecoration(
-          hintText: StringsContants.passWord.tr,
+          hintText: StringsConstants.passWord.tr,
           hintStyle: ThemeConstants.hintTextStyle,
           suffixIcon: _obscurePassword(widget.obscureText),
           enabledBorder: const OutlineInputBorder(

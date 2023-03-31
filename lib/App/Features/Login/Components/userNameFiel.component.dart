@@ -14,7 +14,7 @@ class UserNameFieldComponent extends StatelessWidget {
         controller: usernameController,
         style: ThemeConstants.inputFieldTitleStyle,
         decoration: InputDecoration(
-          hintText: StringsContants.userName.tr,
+          hintText: StringsConstants.userName.tr,
           hintStyle: ThemeConstants.hintTextStyle,
           enabledBorder: const OutlineInputBorder(
             borderSide:

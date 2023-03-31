@@ -11,7 +11,7 @@ class ForgetPassWordComponent extends GetView<LoginController> {
           onTap: () {
             controller.resetPassword();
           },
-          text: StringsContants.forgetPassWord.tr,
+          text: StringsConstants.forgetPassWord.tr,
           style: ThemeConstants.titleTextStyle,
           color: Colors.white,
         ),

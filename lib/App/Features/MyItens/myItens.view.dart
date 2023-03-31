@@ -8,7 +8,7 @@ class MyItensView extends GetView<MyItensController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(StringsContants.myItens.tr),
+        title: Text(StringsConstants.myItens.tr),
       ),
       body: _body(),
     );
@@ -38,6 +38,6 @@ class MyItensView extends GetView<MyItensController> {
           ),
         )
       : Center(
-          child: Text(StringsContants.noItens.tr),
+          child: Text(StringsConstants.noItens.tr),
         );
 }

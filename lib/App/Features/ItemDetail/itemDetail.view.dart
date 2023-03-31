@@ -9,7 +9,7 @@ class ItemDetailView extends GetView<ItemDetailController> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text(StringsContants.itemDetail.tr),
+          title: Text(StringsConstants.itemDetail.tr),
         ),
         body: _body(),
       );

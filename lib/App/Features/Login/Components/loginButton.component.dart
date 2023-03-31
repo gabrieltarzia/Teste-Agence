@@ -7,7 +7,7 @@ class LoginButtonComponent extends GetView<LoginController> {
 
   @override
   Widget build(BuildContext context) => SocialLoginButton(
-      text: StringsContants.login.tr,
+      text: StringsConstants.login.tr,
       buttonType: SocialLoginButtonType.generalLogin,
       onPressed: () {
         controller.tryUsernameLogin();
